@@ -1,6 +1,6 @@
 <?php
 
-
+ini_set('display_errors',0);
 if( isset( $_REQUEST['calculate'] ))
 
 {
@@ -43,7 +43,7 @@ $res =$add1*$add2;
 
 }
 
-if($operator=="/")
+if($operator=="/" && $_REQUEST['lvalue'] != 0)
 
 {
 
@@ -54,6 +54,19 @@ $add2 = $_REQUEST['lvalue'];
 $res= $add1/$add2;
 
 }
+
+if($operator=="%")
+
+{
+
+$add1 = $_REQUEST['fvalue'];
+
+$add2 = $_REQUEST['lvalue'];
+
+$res= $add1%$add2;
+
+}
+
 }
 ?>
 
@@ -70,8 +83,8 @@ $res= $add1/$add2;
 
     <form style="text-align: center;">
 
-    First Number : <input type="text" name="fvalue"><br><br>
-    Second Number : <input type="text" name="lvalue"><br><br>
+    First Number : <input type="number" name="fvalue" required ><br><br>
+    Second Number : <input type="number" name="lvalue" required ><br><br>
 
                 <td style="color:burlywood; font-family:'Times New Roman'">Select Operator</td>
 
@@ -84,11 +97,15 @@ $res= $add1/$add2;
                             <option>*</option>
 
                             <option>/</option>
-
+                            <option>%</option>
                     </select>     
                     <input type="submit" name="calculate" value="Calculate" /><br><br>
-
+                 
                     <h3>Output: <?php echo $res;?></h3>
+                    <?php
+                    if($_REQUEST['lvalue'] == 0)
+                     echo "<h2>Division by zero is undefined</h2>";
+                    ?>
            
        
  </form>
