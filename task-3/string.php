@@ -17,10 +17,48 @@ echo ($str) ."<br>";
 #chop()
 $str = "Padma Bridge!";
 echo $str . "<br>";
-echo chop($str,"Bridge!");
+echo chop($str,"Bridge!")."<br>";
 
-#chr()--Return characters from different ASCII values.
-echo char(52) . "<br>";
-echo char('A') . "<br>";
-
-
+echo "<br>";
+$str2 = "Hello world!";
+echo chunk_split($str2,2,".");
+echo "<br>";
+$str3 = "Hello World!";
+echo count_chars($str3,3);
+echo "<br>";
+echo chr(54) . "<br>"; 
+$str = "Hello world. It's a beautiful day.";
+print_r (explode(" ",$str));
+echo "<br>";
+$arr = array('Hello','World!','Beautiful','Day!');
+echo implode(" ",$arr);
+echo "<br>";
+$arr = array('Hello','World!','Beautiful','Day!');
+echo join(" ",$arr);
+echo "<br>";
+echo number_format("1000000")."<br>";
+echo number_format("1000000",2)."<br>";
+echo number_format("1000000",2,",",".");
+echo "<br>";
+/*
+$number = 1234.56;
+setlocale(LC_MONETARY,"bdt");
+echo money_format("The price is %i", $number);
+*/
+echo str_replace("world","Peter","Hello world!");
+echo "<br>";
+echo str_word_count("Hello world!");
+echo "<br>";
+echo strcmp("Hello world!","Hello world!");
+echo "<br>";
+echo strlen("Pondit");
+echo "<br>";
+$str = "Hello World!";
+echo $str . "<br>";
+echo trim($str,"Hed!");
+echo "<br>";
+echo ucfirst("hello world!");
+echo "<br>";
+echo ucwords("hello world");
+echo "<br>";
+echo substr_replace("Hello","world",0);
