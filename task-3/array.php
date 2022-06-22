@@ -89,3 +89,54 @@ $a2=array("a"=>"red","b"=>"green","c"=>"blue");
 $result=array_intersect_assoc($a1,$a2);
 print_r($result);
 echo "<br>";
+$a=array("Volvo"=>"XC90","BMW"=>"X5");
+if (array_key_exists("Volvoo",$a))
+  {
+  echo "Key exists!";
+  }
+else
+  {
+  echo "Key does not exist!";
+  }
+echo "<br>";
+
+$a=array("Volvo"=>"XC90","BMW"=>"X5","Toyota"=>"Highlander");
+print_r(array_keys($a));
+echo "<br>";
+
+function myfunction1($num)
+{
+  return($num+$num);
+}
+
+$a=array(1,2,3,4,5);
+print_r(array_map("myfunction1",$a));
+echo "<br>";
+$a1=array("red","green");
+$a2=array("blue","yellow");
+print_r(array_merge($a1,$a2));
+echo "<br>";
+$a=array("Dog","Cat","Horse","Bear","Zebra");
+array_multisort($a);
+print_r($a);
+echo "<br>";
+$a=array("red","green");
+print_r(array_pad($a,5,"blue"));
+echo "<br>";
+$a=array("red","green","blue");
+array_pop($a);
+print_r($a);
+echo "<br>";
+$a=array(5,5);
+echo(array_product($a));
+echo "<br>";
+$a=array("red","green");
+array_push($a,"blue","yellow");
+print_r($a);
+echo "<br>";
+$a=array("red","green","blue","yellow","brown");
+$random_keys=array_rand($a,3);
+echo $a[$random_keys[0]]."<br>";
+echo $a[$random_keys[1]]."<br>";
+echo $a[$random_keys[2]];
+echo "<br>";
