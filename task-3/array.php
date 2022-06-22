@@ -172,3 +172,69 @@ echo "<br>";
 $a=array(5,15,25);
 echo array_sum($a);
 echo "<br>";
+$a=array("a"=>"red","b"=>"green","c"=>"red");
+print_r(array_unique($a));
+echo "<br>";
+$a=array("a"=>"red","b"=>"green");
+array_unshift($a,"blue");
+print_r($a);
+echo "<br>";
+$a=array("Name"=>"Peter","Age"=>"41","Country"=>"USA");
+print_r(array_values($a));
+echo "<br>";
+function myfunction3($value,$key)
+{
+echo "The key $key has the value $value<br>";
+}
+$a=array("a"=>"red","b"=>"green","c"=>"blue");
+array_walk($a,"myfunction3");
+echo "<br>";
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+arsort($age);
+
+foreach($age as $x=>$x_value)
+   {
+   echo "Key=" . $x . ", Value=" . $x_value;
+   echo "<br>";
+   }
+   echo "<br>";
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+asort($age);
+
+foreach($age as $x=>$x_value)
+   {
+   echo "Key=" . $x . ", Value=" . $x_value;
+   echo "<br>";
+   }
+echo "<br>";
+   $firstname = "Peter";
+$lastname = "Griffin";
+$age = "41";
+
+$result = compact("firstname", "lastname", "age");
+
+print_r($result);
+echo "<br>";
+$cars=array("Volvo","BMW","Toyota");
+echo count($cars);
+echo "<br>";
+$people = array("Peter", "Joe", "Glenn", "Cleveland");
+
+if (in_array("Glenn", $people))
+  {
+  echo "Match found";
+  }
+else
+  {
+  echo "Match not found";
+  }
+  echo "<br>";
+  $cars=array("Volvo","BMW","Toyota");
+  sort($cars);
+  
+  $clength=count($cars);
+  for($x=0;$x<$clength;$x++)
+    {
+    echo $cars[$x];
+    echo "<br>";
+    }
