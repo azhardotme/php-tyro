@@ -140,3 +140,35 @@ echo $a[$random_keys[0]]."<br>";
 echo $a[$random_keys[1]]."<br>";
 echo $a[$random_keys[2]];
 echo "<br>";
+function myfunction2($v1,$v2)
+{
+return $v1 . "-" . $v2;
+}
+$a=array("Dog","Cat","Horse");
+print_r(array_reduce($a,"myfunction2"));
+echo "<br>";
+$a1=array("red","green");
+$a2=array("blue","yellow");
+print_r(array_replace($a1,$a2));
+echo "<br>";
+$a1=array("a"=>array("red"),"b"=>array("green","blue"),);
+$a2=array("a"=>array("yellow"),"b"=>array("black"));
+print_r(array_replace_recursive($a1,$a2));
+echo "<br>";
+$a=array("a"=>"Volvo","b"=>"BMW","c"=>"Toyota");
+print_r(array_reverse($a));
+echo "<br>";
+$a=array("a"=>"red","b"=>"green","c"=>"blue");
+echo array_search("red",$a);
+echo "<br>";
+$a=array("red","green","blue","yellow","brown");
+print_r(array_slice($a,2));
+echo "<br>";
+$a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+$a2=array("a"=>"purple","b"=>"orange");
+array_splice($a1,0,2,$a2);
+print_r($a1);
+echo "<br>";
+$a=array(5,15,25);
+echo array_sum($a);
+echo "<br>";
