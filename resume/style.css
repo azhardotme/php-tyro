@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: fffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    background-color: ffffff;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.pimg{
+    width: 120px;
+    height: 120px;
+    border: 3px solid white;
+    float: right;
+
+}
+
+.contact{
+    float: left;
+  
+}
+.clear-div{
+    clear: both;
+}
+
+hr{
+ 
+  height: 1px;
+  border: none;
+  background-color: black;
+  margin-bottom: 6px;
+  margin-top: 3px;
+}
+.present-status{
+    margin-top: 20px;
+}
+
+.education{
+    margin-top: 20px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+td,th{
+    border: 1px solid #dddddd;
+    padding: 6px;
+    text-align: center;
+}
+
+.computer-skills{
+    margin-top: 20px;
+}
+
+.plist{
+    margin-left: 4em;
+}
+.personal-info{
+    margin-left: 10em; 
+}
+
+
+.footer{
+    text-align: center;
+    margin-top: 100px;
+    padding: 50px 50px ;
+
+}
+
+
