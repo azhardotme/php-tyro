@@ -16,9 +16,14 @@
 
 <?php
 
+
 $igpa= $_POST['gpa'];
 
-if ($igpa > 5.0) {
+if ($igpa == null) {
+    echo "You have been passed with grade 'X'. Forget the mistakes, Remember the lessons.";
+    }
+
+elseif ($igpa > 5.0) {
     echo "You have provided wrong grade point.";
     }
 elseif ($igpa == 5.00) {
